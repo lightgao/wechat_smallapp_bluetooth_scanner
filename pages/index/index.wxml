@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view bindtap="bindViewTapScanBT" class="usermotto">
+    <text>{{discoverying ? "STOP" : "START"}} | {{ tipinfo }}</text>
+  </view>
+  <view class="dev-list" wx:for="{{btdevsarray}}">
+    {{index}}: {{item.deviceId}} | {{item.RSSI}} | {{item.counter}} | {{item.name}}
+    <!--{{index}}: {{item.deviceId}} | {{item.RSSI}} | {{item.name}} | {{item.counter}} | {{item.timestamp}}-->
+  </view>
+  <!--<text>{{btdevs}}</text>-->
+</view>
